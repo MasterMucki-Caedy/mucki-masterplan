@@ -2,12 +2,6 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-
-<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiTXVja2kgTWFzdGVycGxhbiIsInNob3J0X25hbWUiOiJNdWNraSIsInN0YXJ0X3VybCI6Ii4iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsImJhY2tncm91bmRfY29sb3IiOiIjMDYwZjFhIiwidGhlbWVfY29sb3IiOiIjMzhiZGY4IiwiaWNvbnMiOlt7InNyYyI6Imh0dHBzOi8vYXBpLmRpY2ViZWFyLmNvbS83LngvaWRlbnRpY29uL3N2Zz9zZWVkPW11Y2tpIiwic2l6ZXMiOiIxOTJ4MTkyIiwidHlwZSI6ImltYWdlL3N2Zyt4bWwifV19">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Mucki">
-<meta name="theme-color" content="#060f1a">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <title>🚀 Mucki Masterplan</title>
 <style>
@@ -313,109 +307,6 @@ select.inp option{background:#0a1628}
 .ai-opinion-txt{font-size:11px;line-height:1.7;color:#94a3b8}
 .ai-consensus{background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.2);border-radius:10px;padding:12px;margin-top:10px}
 .consensus-verdict{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:800;margin:4px 0}
-
-/* ── CHATBOT ── */
-.chat-fab{position:fixed;bottom:80px;right:16px;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#38bdf8);border:none;cursor:pointer;font-size:22px;box-shadow:0 4px 20px rgba(99,102,241,.4);z-index:1000;transition:transform .2s}
-.chat-fab:hover{transform:scale(1.1)}
-.chat-window{position:fixed;bottom:145px;right:16px;width:320px;max-height:460px;background:#0d1929;border:1px solid rgba(56,189,248,.25);border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.5);z-index:999;display:flex;flex-direction:column;overflow:hidden}
-.chat-header{background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(56,189,248,.1));padding:12px 14px;font-weight:800;font-size:13px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:8px}
-.chat-messages{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;max-height:300px}
-.chat-msg{padding:9px 12px;border-radius:10px;font-size:11px;line-height:1.7;max-width:85%}
-.chat-msg.user{background:rgba(56,189,248,.15);border:1px solid rgba(56,189,248,.2);align-self:flex-end;color:#e2e8f0}
-.chat-msg.ai{background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.2);align-self:flex-start;color:#e2e8f0}
-.chat-msg.ai.loading{color:#64748b}
-.chat-input-row{display:flex;gap:6px;padding:10px;border-top:1px solid rgba(255,255,255,.06)}
-.chat-inp{flex:1;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:#060f1a;color:var(--text);font-family:inherit;font-size:11px;outline:none}
-.chat-send{padding:8px 12px;border-radius:8px;border:none;background:var(--blue);color:#000;font-weight:800;font-size:11px;cursor:pointer}
-
-/* ── DIVKALENDER ── */
-.div-month{margin-bottom:14px}
-.div-month-hdr{font-weight:800;font-size:12px;color:var(--blue);padding:6px 0;border-bottom:1px solid var(--border);margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px}
-.div-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.03)}
-.div-row:last-child{border:none}
-.div-ticker{font-weight:800;font-size:13px;width:50px}
-.div-date{font-size:10px;color:var(--muted)}
-.div-amount{font-size:13px;font-weight:700;color:#4ade80}
-.div-type{font-size:9px;padding:2px 6px;border-radius:20px}
-.div-type-m{background:rgba(74,222,128,.15);color:#4ade80}
-.div-type-q{background:rgba(129,140,248,.15);color:#818cf8}
-.div-total-bar{background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.15);border-radius:10px;padding:11px;margin-bottom:12px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center}
-
-/* ── SIMULATOR ── */
-.sim-slider{width:100%;-webkit-appearance:none;height:6px;border-radius:99px;background:var(--dim2);outline:none;margin:8px 0}
-.sim-slider::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--blue);cursor:pointer;box-shadow:0 2px 8px rgba(56,189,248,.4)}
-.sim-result-big{font-family:'Space Grotesk',sans-serif;font-size:42px;font-weight:800;color:#4ade80;font-variant-numeric:tabular-nums;line-height:1;margin:8px 0}
-.sim-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
-.sim-cell{background:var(--dim2);border:1px solid var(--border);border-radius:9px;padding:10px;text-align:center}
-.sim-chart-bar{height:8px;border-radius:99px;background:linear-gradient(90deg,#6366f1,#38bdf8,#4ade80);margin:2px 0;transition:width .3s}
-
-/* ── S&P COMPARE ── */
-.cmp-legend{display:flex;gap:16px;margin-bottom:10px;font-size:11px}
-.cmp-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px}
-.cmp-stat{background:var(--dim2);border:1px solid var(--border);border-radius:9px;padding:10px;text-align:center}
-
-/* ── ALARM ── */
-.alarm-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04)}
-.alarm-row:last-child{border:none}
-.alarm-badge{font-size:9px;padding:2px 7px;border-radius:20px;font-weight:700}
-.alarm-above{background:rgba(74,222,128,.15);color:#4ade80}
-.alarm-below{background:rgba(248,113,113,.12);color:#f87171}
-
-/* ── PIE CHART ── */
-.pie-wrap{position:relative;width:160px;height:160px;margin:0 auto}
-.pie-wrap canvas{width:160px!important;height:160px!important}
-.pie-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
-.pie-legend{display:flex;flex-wrap:wrap;gap:5px 10px;margin-top:10px;justify-content:center}
-.pie-leg-item{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--muted)}
-.pie-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-
-/* ── SETTINGS MODAL ── */
-.settings-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:2000;display:flex;align-items:flex-end;justify-content:center}
-.settings-sheet{background:#0d1929;border-radius:20px 20px 0 0;padding:20px;width:100%;max-width:480px;max-height:85vh;overflow-y:auto;border-top:1px solid rgba(56,189,248,.2)}
-.settings-title{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.setting-row{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05)}
-.setting-row:last-child{border:none}
-.setting-label{font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px}
-.setting-sub{font-size:10px;color:var(--muted);margin-bottom:8px}
-.setting-inp{width:100%;padding:9px 12px;border-radius:8px;border:1px solid var(--border);background:#060f1a;color:var(--text);font-family:inherit;font-size:13px;outline:none;box-sizing:border-box}
-.setting-inp:focus{border-color:var(--blue)}
-.strategy-btns{display:flex;gap:6px}
-.strat-btn{flex:1;padding:9px 6px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:inherit;font-size:11px;font-weight:700;cursor:pointer;text-align:center;transition:all .15s}
-.strat-btn.on{background:rgba(74,222,128,.15);border-color:rgba(74,222,128,.3);color:#4ade80}
-.settings-save{width:100%;padding:13px;border-radius:10px;border:none;background:linear-gradient(135deg,#6366f1,#38bdf8);color:#fff;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;margin-top:12px}
-.gear-btn{position:fixed;bottom:80px;left:16px;width:44px;height:44px;border-radius:50%;background:rgba(15,23,42,.9);border:1px solid var(--border);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;z-index:990;transition:all .2s;box-shadow:0 2px 12px rgba(0,0,0,.3)}
-.gear-btn:hover{border-color:var(--blue);transform:rotate(30deg)}
-
-/* ── PIE CHART ── */
-.pie-wrap{position:relative;width:160px;height:160px;margin:0 auto 12px}
-.pie-wrap canvas{width:160px!important;height:160px!important}
-.pie-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
-.pie-center-val{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:800;line-height:1}
-.pie-center-lbl{font-size:9px;color:var(--muted);margin-top:2px}
-.pie-legend{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-top:8px}
-.pie-leg-item{display:flex;align-items:center;gap:4px;font-size:10px}
-.pie-leg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-
-/* ── SETTINGS MODAL ── */
-.settings-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:9998;display:flex;align-items:flex-end}
-.settings-sheet{background:#0d1929;border-radius:20px 20px 0 0;width:100%;padding:20px;max-height:85vh;overflow-y:auto;border-top:1px solid rgba(56,189,248,.2)}
-.settings-title{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.settings-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05)}
-.settings-row:last-child{border:none}
-.settings-label{font-size:12px;font-weight:700}
-.settings-sub{font-size:10px;color:var(--muted);margin-top:2px}
-.settings-inp{background:#060f1a;border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:13px;font-weight:700;padding:6px 10px;width:90px;text-align:right;outline:none}
-.settings-inp:focus{border-color:var(--blue)}
-.settings-toggle{display:flex;gap:4px}
-.s-tog-btn{padding:5px 10px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:inherit;font-size:10px;font-weight:700;cursor:pointer;transition:all .15s}
-.s-tog-btn.on{background:rgba(56,189,248,.15);border-color:var(--blue);color:var(--blue)}
-.settings-fab{position:fixed;bottom:80px;left:16px;width:44px;height:44px;border-radius:50%;background:rgba(30,41,59,.9);border:1px solid var(--border);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;z-index:997;box-shadow:0 2px 12px rgba(0,0,0,.3)}
-
-.override-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04)}
-.override-row:last-child{border:none}
-.override-ticker{font-weight:800;font-size:13px;width:50px}
-.override-price-val{font-size:13px;color:#38bdf8;font-weight:700}
-.override-source{font-size:9px;color:#64748b}
 </style>
 </head>
 <body>
@@ -458,6 +349,10 @@ select.inp option{background:#0a1628}
     <div class="tab"     onclick="T(this,10)">📅 Dividenden</div>
     <div class="tab"     onclick="T(this,11)">🎯 Simulator</div>
     <div class="tab"     onclick="T(this,12)">📉 vs S&P500</div>
+    <div class="tab"     onclick="T(this,13)">🎯 Ziel-Tracker</div>
+    <div class="tab"     onclick="T(this,14)">💸 Steuer</div>
+    <div class="tab"     onclick="T(this,15)">📰 News</div>
+    <div class="tab"     onclick="T(this,16)">⚠️ Risiko</div>
   </div>
 </div>
 
@@ -495,24 +390,6 @@ select.inp option{background:#0a1628}
     <div class="card-t">💰 <span>Cash Flow Aufschlüsselung</span></div>
     <div id="cf-breakdown"></div>
   </div>
-
-  <!-- PIE CHART CARD -->
-  <div class="card" id="pie-card">
-    <div class="card-t">🥧 <span>Portfolio-Verteilung</span>
-      <div style="margin-left:auto;display:flex;gap:5px">
-        <button class="s-tog-btn on" id="pie-mode-weight" onclick="setPieMode('weight',this)" style="font-size:9px;padding:3px 8px">💶 Wert</button>
-        <button class="s-tog-btn" id="pie-mode-cf" onclick="setPieMode('cf',this)" style="font-size:9px;padding:3px 8px">💰 CF</button>
-      </div>
-    </div>
-    <div class="pie-wrap">
-      <canvas id="pie-canvas"></canvas>
-      <div class="pie-center">
-        <div class="pie-center-val" id="pie-center-val">–</div>
-        <div class="pie-center-lbl" id="pie-center-lbl">Depot</div>
-      </div>
-    </div>
-    <div class="pie-legend" id="pie-legend"></div>
-  </div>
   <div class="card"><div class="card-t">📊 <span>Portfolio-Gewichtung</span></div><div id="depot-bars"></div></div>
 </div>
 
@@ -534,46 +411,6 @@ select.inp option{background:#0a1628}
 
 <!-- ═══ TAB 2: KAUFPLAN ═══ -->
 <div class="sec" id="s2">
-  <!-- HEUTE KAUFEN BANNER -->
-  <div style="background:linear-gradient(135deg,rgba(74,222,128,.12),rgba(56,189,248,.08));border:1px solid rgba(74,222,128,.3);border-radius:12px;padding:14px;margin-bottom:10px;margin-top:4px">
-    <div style="font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:14px;color:#4ade80;margin-bottom:6px">🚀 Heute kaufen — 200€</div>
-    <div style="font-size:11px;color:#94a3b8;margin-bottom:10px">Beste Zeit: <b style="color:#fbbf24">16:30 – 17:00 Uhr</b> · US-Börse offen, Volatilität stabil</div>
-    <div style="display:flex;flex-direction:column;gap:6px" id="heute-kaufen-list">
-      <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;background:rgba(0,0,0,.2);border-radius:8px">
-        <div style="display:flex;align-items:center;gap:8px">
-          <span style="font-weight:800;color:#6ee7b7;width:36px">LTC</span>
-          <span style="font-size:10px;color:#64748b">LTC Properties · 6.3%</span>
-        </div>
-        <span style="font-weight:800;color:#e2e8f0">55€</span>
-      </div>
-      <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;background:rgba(0,0,0,.2);border-radius:8px">
-        <div style="display:flex;align-items:center;gap:8px">
-          <span style="font-weight:800;color:#4ade80;width:36px">EPR</span>
-          <span style="font-size:10px;color:#64748b">EPR Properties · 6.2%</span>
-        </div>
-        <span style="font-weight:800;color:#e2e8f0">55€</span>
-      </div>
-      <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;background:rgba(0,0,0,.2);border-radius:8px">
-        <div style="display:flex;align-items:center;gap:8px">
-          <span style="font-weight:800;color:#38bdf8;width:36px">O</span>
-          <span style="font-size:10px;color:#64748b">Realty Income · 5.7%</span>
-        </div>
-        <span style="font-weight:800;color:#e2e8f0">50€</span>
-      </div>
-      <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;background:rgba(0,0,0,.2);border-radius:8px">
-        <div style="display:flex;align-items:center;gap:8px">
-          <span style="font-weight:800;color:#34d399;width:36px">ADC</span>
-          <span style="font-size:10px;color:#64748b">Agree Realty · 4.4%</span>
-        </div>
-        <span style="font-weight:800;color:#e2e8f0">40€</span>
-      </div>
-    </div>
-    <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid rgba(255,255,255,.06)">
-      <span style="font-size:11px;color:#64748b">Gesamt · nur 👑 Monatszahler</span>
-      <span style="font-weight:800;font-size:16px;color:#4ade80">200€</span>
-    </div>
-    <div id="kauf-timer-badge" style="display:none;margin-top:8px;padding:8px 12px;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);border-radius:8px;font-size:11px;font-weight:700;color:#fbbf24;text-align:center"></div>
-  </div>
   <div class="card">
     <div class="card-t">💶 <span>Budget pro Monat</span></div>
     <div class="budget-btns" id="budget-btns">
@@ -585,11 +422,19 @@ select.inp option{background:#0a1628}
     <div style="font-size:10px;color:var(--muted);margin-bottom:10px">Smart-Verteilung: untergewichtete Assets bekommen mehr</div>
     <div id="plan-rows"></div>
   </div>
-  <div class="card" id="kaufplan-15-card">
-    <div class="card-t">📅 <span>15. vs. Monatsende</span>
-      <button onclick="editKaufplan()" style="margin-left:auto;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2);color:var(--blue);padding:4px 10px;border-radius:6px;font-size:10px;font-weight:700;cursor:pointer;font-family:inherit">✏️ Anpassen</button>
+  <div class="card">
+    <div class="card-t">📅 <span>15. vs. Monatsende</span></div>
+    <div style="font-size:11px;line-height:2">
+      <div style="color:var(--blue);font-weight:700;margin-bottom:4px">15. des Monats: 62€ → Monatszahler</div>
+      <div style="padding-left:10px">→ <b style="color:#4ade80">EPR</b>: 20€ (0.34 Ant.) 📅</div>
+      <div style="padding-left:10px">→ <b style="color:#34d399">ADC</b>: 20€ (0.25 Ant.) 📅</div>
+      <div style="padding-left:10px">→ <b style="color:#6ee7b7">LTC</b>: 12€ (0.31 Ant.) 📅</div>
+      <div style="padding-left:10px">→ <b style="color:#38bdf8">O</b>: 10€ (0.15 Ant.) 📅</div>
+      <div style="color:var(--green);font-weight:700;margin:10px 0 4px">Monatsende: 200€ → 4-Säulen</div>
+      <div style="padding-left:10px">→ <b style="color:#38bdf8">O</b>: 30€ &nbsp;<b style="color:#818cf8">VZ</b>: 25€ &nbsp;<b style="color:#a78bfa">HSBA</b>: 25€</div>
+      <div style="padding-left:10px">→ <b style="color:#60a5fa">STAG</b>: 25€ &nbsp;<b style="color:#4ade80">EPR</b>: 30€ &nbsp;<b style="color:#34d399">ADC</b>: 25€</div>
+      <div style="padding-left:10px">→ <b style="color:#fbbf24">KO</b>: 20€ &nbsp;<b style="color:#f59e0b">PEP</b>: 20€</div>
     </div>
-    <div id="kaufplan-15-content"></div>
   </div>
 </div>
 
@@ -654,106 +499,6 @@ select.inp option{background:#0a1628}
 
 <!-- ═══ TAB 6: BUCHUNGEN ═══ -->
 <div class="sec" id="s6">
-  <!-- RESTGELD + KLEINGELD CARD -->
-  <div class="card" style="margin-bottom:10px;border-color:rgba(74,222,128,.3)">
-    <div class="card-t">💰 <span>Schnell investieren</span>
-      <span style="font-size:9px;color:#64748b;margin-left:auto">Restgeld &amp; Kleingeld</span>
-    </div>
-
-    <!-- Restgeld vom Monat -->
-    <div style="margin-bottom:12px">
-      <div style="font-size:11px;font-weight:800;color:#4ade80;margin-bottom:6px">💸 Restgeld vor Lohn</div>
-      <div style="font-size:10px;color:#64748b;margin-bottom:8px">Was übrig bleibt — sofort investieren statt ausgeben</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px" id="restgeld-presets">
-        <button onclick="setRestgeld(5)"  style="flex:1;min-width:50px;padding:8px;border-radius:8px;border:1px solid rgba(74,222,128,.3);background:rgba(74,222,128,.08);color:#4ade80;font-weight:800;font-size:12px;cursor:pointer">5€</button>
-        <button onclick="setRestgeld(10)" style="flex:1;min-width:50px;padding:8px;border-radius:8px;border:1px solid rgba(74,222,128,.3);background:rgba(74,222,128,.08);color:#4ade80;font-weight:800;font-size:12px;cursor:pointer">10€</button>
-        <button onclick="setRestgeld(20)" style="flex:1;min-width:50px;padding:8px;border-radius:8px;border:1px solid rgba(74,222,128,.3);background:rgba(74,222,128,.08);color:#4ade80;font-weight:800;font-size:12px;cursor:pointer">20€</button>
-        <button onclick="setRestgeld(50)" style="flex:1;min-width:50px;padding:8px;border-radius:8px;border:1px solid rgba(74,222,128,.3);background:rgba(74,222,128,.08);color:#4ade80;font-weight:800;font-size:12px;cursor:pointer">50€</button>
-      </div>
-      <div style="display:flex;gap:8px;align-items:center">
-        <input type="number" id="restgeld-input" placeholder="Betrag €" min="1" max="500" step="1"
-          style="flex:1;background:#0d1929;border:1px solid rgba(74,222,128,.3);color:#e2e8f0;padding:10px;border-radius:8px;font-family:inherit;font-size:13px"
-          oninput="updateRestgeldPreview()">
-        <button onclick="investRestgeld()" style="padding:10px 16px;border-radius:8px;border:none;background:linear-gradient(135deg,#4ade80,#38bdf8);color:#000;font-weight:800;font-size:13px;cursor:pointer">
-          🚀 Invest
-        </button>
-      </div>
-      <div id="restgeld-preview" style="margin-top:8px;font-size:10px;color:#64748b"></div>
-    </div>
-
-    <div style="height:1px;background:rgba(255,255,255,.06);margin-bottom:12px"></div>
-
-    <!-- Kleingeld / Roundup -->
-    <div>
-      <div style="font-size:11px;font-weight:800;color:#fbbf24;margin-bottom:6px">🪙 Kleingeld sammeln</div>
-      <div style="font-size:10px;color:#64748b;margin-bottom:8px">Beträge aufrunden — Differenz investieren</div>
-
-      <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
-        <div style="flex:1">
-          <div style="font-size:10px;color:#64748b;margin-bottom:4px">Ausgabe (z.B. 7,40€)</div>
-          <input type="number" id="roundup-amount" placeholder="z.B. 7.40" step="0.01" min="0.01"
-            style="width:100%;background:#0d1929;border:1px solid rgba(251,191,36,.3);color:#e2e8f0;padding:10px;border-radius:8px;font-family:inherit;font-size:13px"
-            oninput="updateRoundup()">
-        </div>
-        <div style="flex:1">
-          <div style="font-size:10px;color:#64748b;margin-bottom:4px">Aufrunden auf</div>
-          <select id="roundup-to" onchange="updateRoundup()"
-            style="width:100%;background:#0d1929;border:1px solid rgba(251,191,36,.3);color:#e2e8f0;padding:10px;border-radius:8px;font-family:inherit;font-size:13px">
-            <option value="1">nächster €</option>
-            <option value="5">nächste 5€</option>
-            <option value="10">nächste 10€</option>
-          </select>
-        </div>
-      </div>
-
-      <div id="roundup-preview" style="background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.15);border-radius:8px;padding:8px;font-size:11px;color:#fbbf24;display:none">
-        Kleingeld: <strong id="roundup-diff">–</strong> → wird investiert in LTC 👑
-      </div>
-
-      <!-- Kleingeld Sparschwein -->
-      <div style="margin-top:10px;background:rgba(251,191,36,.04);border:1px solid rgba(251,191,36,.1);border-radius:8px;padding:10px">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-          <span style="font-size:10px;color:#94a3b8">🐷 Kleingeld-Sparschwein</span>
-          <span style="font-size:14px;font-weight:900;color:#fbbf24" id="piggy-total">0.00€</span>
-        </div>
-        <div style="height:4px;background:rgba(255,255,255,.05);border-radius:2px;margin-bottom:8px">
-          <div id="piggy-bar" style="height:100%;width:0%;background:linear-gradient(90deg,#fbbf24,#f97316);border-radius:2px;transition:width .5s"></div>
-        </div>
-        <div style="display:flex;gap:6px">
-          <button onclick="addRoundup()" style="flex:1;padding:8px;border-radius:8px;border:1px solid rgba(251,191,36,.3);background:rgba(251,191,36,.1);color:#fbbf24;font-weight:800;font-size:11px;cursor:pointer">
-            + Hinzufügen
-          </button>
-          <button onclick="investPiggy()" style="flex:1;padding:8px;border-radius:8px;border:none;background:linear-gradient(135deg,#fbbf24,#f97316);color:#000;font-weight:800;font-size:11px;cursor:pointer">
-            🚀 Alles investieren
-          </button>
-          <button onclick="resetPiggy()" style="padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:transparent;color:#475569;font-size:11px;cursor:pointer">
-            🗑️
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- GITHUB SYNC CARD -->
-  <div class="card" style="margin-bottom:10px;border-color:rgba(99,102,241,.3)">
-    <div class="card-t">📤 <span>GitHub Sync</span>
-      <span style="font-size:9px;color:#64748b;margin-left:auto">Alle Geräte synchron</span>
-    </div>
-    <div style="font-size:11px;color:#94a3b8;margin-bottom:10px;line-height:1.6">
-      Nach jeder Buchung hier den Code kopieren → in GitHub einfügen → auf allen Geräten aktuell!
-    </div>
-    <button onclick="showGithubExport()" style="width:100%;padding:12px;border-radius:10px;border:none;background:linear-gradient(135deg,#6366f1,#38bdf8);color:#fff;font-family:inherit;font-size:13px;font-weight:800;cursor:pointer">
-      📋 Code für GitHub kopieren
-    </button>
-    <div id="github-export-box" style="display:none;margin-top:10px">
-      <div style="font-size:10px;color:#64748b;margin-bottom:6px">Diesen Text in GitHub → index.html → Zeile mit MASTER_HOLDINGS ersetzen:</div>
-      <textarea id="github-export-text" style="width:100%;height:120px;background:#060f1a;border:1px solid var(--border);color:#4ade80;font-size:10px;padding:8px;border-radius:8px;font-family:monospace;resize:none" readonly></textarea>
-      <button onclick="copyGithubExport()" style="margin-top:6px;width:100%;padding:10px;border-radius:8px;border:1px solid rgba(74,222,128,.3);background:rgba(74,222,128,.1);color:#4ade80;font-family:inherit;font-size:12px;font-weight:800;cursor:pointer">
-        ✓ In Zwischenablage kopieren
-      </button>
-    </div>
-  </div>
-
   <div id="bk-empty" style="text-align:center;padding:40px 20px;color:var(--muted);display:none">
     <div style="font-size:36px;margin-bottom:12px">📝</div>
     <div style="font-size:14px;font-weight:700">Noch keine Buchungen</div>
@@ -771,6 +516,84 @@ select.inp option{background:#0a1628}
 
   <div class="alert-b" style="margin-top:12px">
     📸 <b>So funktioniert's:</b> Schick einen Screenshot deines Revolut Invest Portfolios an Claude — er liest alle Positionen aus und aktualisiert die App automatisch.
+  </div>
+
+    <!-- RESTGELD + KLEINGELD CARD -->
+  <div class="card" style="margin-bottom:10px;border-color:rgba(74,222,128,.3)">
+    <div class="card-t">💰 <span>Schnell investieren</span>
+      <span style="font-size:9px;color:#64748b;margin-left:auto">Restgeld &amp; Kleingeld</span>
+    </div>
+    <div style="margin-bottom:12px">
+      <div style="font-size:11px;font-weight:800;color:#4ade80;margin-bottom:6px">💸 Restgeld vor Lohn</div>
+      <div style="font-size:10px;color:#64748b;margin-bottom:8px">Was übrig bleibt — sofort investieren statt ausgeben</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px" id="restgeld-presets">
+        <button onclick="setRestgeld(5)"  style="flex:1;min-width:50px;padding:8px;border-radius:8px;border:1px solid rgba(74,222,128,.3);background:rgba(74,222,128,.08);color:#4ade80;font-weight:800;font-size:12px;cursor:pointer">5€</button>
+        <button onclick="setRestgeld(10)" style="flex:1;min-width:50px;padding:8px;border-radius:8px;border:1px solid rgba(74,222,128,.3);background:rgba(74,222,128,.08);color:#4ade80;font-weight:800;font-size:12px;cursor:pointer">10€</button>
+        <button onclick="setRestgeld(20)" style="flex:1;min-width:50px;padding:8px;border-radius:8px;border:1px solid rgba(74,222,128,.3);background:rgba(74,222,128,.08);color:#4ade80;font-weight:800;font-size:12px;cursor:pointer">20€</button>
+        <button onclick="setRestgeld(50)" style="flex:1;min-width:50px;padding:8px;border-radius:8px;border:1px solid rgba(74,222,128,.3);background:rgba(74,222,128,.08);color:#4ade80;font-weight:800;font-size:12px;cursor:pointer">50€</button>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <input type="number" id="restgeld-input" placeholder="Betrag €" min="1" max="500" step="1"
+          style="flex:1;background:#0d1929;border:1px solid rgba(74,222,128,.3);color:#e2e8f0;padding:10px;border-radius:8px;font-family:inherit;font-size:13px"
+          oninput="updateRestgeldPreview()">
+        <button onclick="investRestgeld()" style="padding:10px 16px;border-radius:8px;border:none;background:linear-gradient(135deg,#4ade80,#38bdf8);color:#000;font-weight:800;font-size:13px;cursor:pointer">🚀 Invest</button>
+      </div>
+      <div id="restgeld-preview" style="margin-top:8px;font-size:10px;color:#64748b"></div>
+    </div>
+    <div style="height:1px;background:rgba(255,255,255,.06);margin-bottom:12px"></div>
+    <div>
+      <div style="font-size:11px;font-weight:800;color:#fbbf24;margin-bottom:6px">🪙 Kleingeld sammeln</div>
+      <div style="font-size:10px;color:#64748b;margin-bottom:8px">Beträge aufrunden — Differenz investieren</div>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+        <div style="flex:1">
+          <div style="font-size:10px;color:#64748b;margin-bottom:4px">Ausgabe (z.B. 7,40€)</div>
+          <input type="number" id="roundup-amount" placeholder="z.B. 7.40" step="0.01" min="0.01"
+            style="width:100%;background:#0d1929;border:1px solid rgba(251,191,36,.3);color:#e2e8f0;padding:10px;border-radius:8px;font-family:inherit;font-size:13px"
+            oninput="updateRoundup()">
+        </div>
+        <div style="flex:1">
+          <div style="font-size:10px;color:#64748b;margin-bottom:4px">Aufrunden auf</div>
+          <select id="roundup-to" onchange="updateRoundup()"
+            style="width:100%;background:#0d1929;border:1px solid rgba(251,191,36,.3);color:#e2e8f0;padding:10px;border-radius:8px;font-family:inherit;font-size:13px">
+            <option value="1">nächster €</option>
+            <option value="5">nächste 5€</option>
+            <option value="10">nächste 10€</option>
+          </select>
+        </div>
+      </div>
+      <div id="roundup-preview" style="background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.15);border-radius:8px;padding:8px;font-size:11px;color:#fbbf24;display:none">
+        Kleingeld: <strong id="roundup-diff">–</strong>
+      </div>
+      <div style="margin-top:10px;background:rgba(251,191,36,.04);border:1px solid rgba(251,191,36,.1);border-radius:8px;padding:10px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <span style="font-size:10px;color:#94a3b8">🐷 Kleingeld-Sparschwein</span>
+          <span style="font-size:14px;font-weight:900;color:#fbbf24" id="piggy-total">0.00€</span>
+        </div>
+        <div style="height:4px;background:rgba(255,255,255,.05);border-radius:2px;margin-bottom:8px">
+          <div id="piggy-bar" style="height:100%;width:0%;background:linear-gradient(90deg,#fbbf24,#f97316);border-radius:2px;transition:width .5s"></div>
+        </div>
+        <div style="display:flex;gap:6px">
+          <button onclick="addRoundup()" style="flex:1;padding:8px;border-radius:8px;border:1px solid rgba(251,191,36,.3);background:rgba(251,191,36,.1);color:#fbbf24;font-weight:800;font-size:11px;cursor:pointer">+ Hinzufügen</button>
+          <button onclick="investPiggy()" style="flex:1;padding:8px;border-radius:8px;border:none;background:linear-gradient(135deg,#fbbf24,#f97316);color:#000;font-weight:800;font-size:11px;cursor:pointer">🚀 Alles investieren</button>
+          <button onclick="resetPiggy()" style="padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:transparent;color:#475569;font-size:11px;cursor:pointer">🗑️</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GITHUB SYNC CARD -->
+  <div class="card" style="margin-bottom:10px;border-color:rgba(99,102,241,.3)">
+    <div class="card-t">📤 <span>GitHub Sync</span>
+      <span style="font-size:9px;color:#64748b;margin-left:auto">Alle Geräte synchron</span>
+    </div>
+    <div style="font-size:10px;color:#64748b;margin-bottom:10px">Exportiere deinen aktuellen Stand für GitHub — dann auf allen Geräten gleich.</div>
+    <button onclick="showGithubExport()" style="width:100%;padding:11px;border-radius:10px;border:1px solid rgba(99,102,241,.4);background:rgba(99,102,241,.1);color:#818cf8;font-family:inherit;font-size:13px;font-weight:800;cursor:pointer">
+      📋 GitHub Export generieren
+    </button>
+    <div id="github-export-box" style="display:none;margin-top:10px">
+      <textarea id="github-export-text" style="width:100%;height:100px;background:#0d1929;border:1px solid rgba(99,102,241,.3);color:#94a3b8;padding:8px;border-radius:8px;font-size:9px;font-family:monospace;resize:none"></textarea>
+      <button onclick="copyGithubExport()" style="width:100%;margin-top:6px;padding:9px;border-radius:8px;border:none;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;font-weight:800;font-size:12px;cursor:pointer">📋 Kopieren</button>
+    </div>
   </div>
 
   <div class="card">
@@ -801,28 +624,6 @@ select.inp option{background:#0a1628}
       <div>✅ <b>Einzelne Aktie antippen</b> — zeigt genaue Anteilszahl</div>
       <div>✅ <b>Portfolio-Übersicht</b> — Gesamtwert + alle Assets</div>
       <div style="margin-top:6px;color:#475569">→ Einfach Screenshot hier in den Chat schicken, Claude liest alles aus</div>
-    </div>
-  </div>
-
-
-  <!-- MANUAL PRICE OVERRIDE -->
-  <div class="card">
-    <div class="card-t">💱 <span>Kurs manuell korrigieren</span>
-      <span style="font-size:9px;color:#64748b;margin-left:auto">z.B. HAFN in NOK</span>
-    </div>
-    <div style="font-size:11px;color:#64748b;margin-bottom:12px">
-      Wenn ein Kurs nicht stimmt (z.B. HAFN in NOK statt USD), hier direkt den richtigen Kurs in <b style="color:#e2e8f0">USD</b> eintragen:
-    </div>
-    <div id="price-override-rows"></div>
-    <div style="display:flex;gap:8px;margin-top:10px">
-      <select id="override-ticker" class="rv-inp" style="margin:0;flex:1">
-        <option value="">Ticker wählen…</option>
-      </select>
-      <input id="override-price" type="number" class="rv-inp" placeholder="Kurs in $" style="margin:0;width:100px" step="0.01">
-      <button onclick="addPriceOverride()" class="rv-btn rv-btn-primary" style="margin:0;padding:8px 14px">✓</button>
-    </div>
-    <div style="margin-top:10px;padding:10px;background:rgba(56,189,248,.06);border-radius:8px;font-size:10px;color:#64748b">
-      💡 <b>HAFN Beispiel:</b> Revolut zeigt 7.90$ → hier 7.90 eintragen → App rechnet exakt wie Revolut
     </div>
   </div>
 
@@ -1074,224 +875,6 @@ select.inp option{background:#0a1628}
 
 </div><!-- /s9 -->
 
-
-<!-- ═══ FIRST LAUNCH KEY SETUP ═══ -->
-<div id="setup-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;overflow-y:auto">
-  <div style="max-width:420px;margin:40px auto;padding:20px">
-    <div style="background:#0d1929;border:1px solid rgba(56,189,248,.3);border-radius:16px;padding:20px">
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:800;color:#38bdf8;margin-bottom:4px">🔑 API Keys einrichten</div>
-      <div style="font-size:11px;color:#64748b;margin-bottom:16px">Einmalig eintragen — werden nur lokal gespeichert, nie übertragen</div>
-
-      <div style="margin-bottom:12px">
-        <div style="font-size:11px;font-weight:700;color:#e2e8f0;margin-bottom:4px">✨ Google Gemini <span style="color:#4ade80;font-size:9px">kostenlos</span></div>
-        <input id="setup-gemini" type="password" placeholder="AIzaSy..." style="width:100%;padding:9px 12px;border-radius:8px;border:1px solid #1a2e4a;background:#0a1628;color:#e2e8f0;font-family:monospace;font-size:11px;box-sizing:border-box">
-        <a href="https://aistudio.google.com/app/apikey" target="_blank" style="font-size:9px;color:#38bdf8">→ aistudio.google.com</a>
-      </div>
-
-      <div style="margin-bottom:12px">
-        <div style="font-size:11px;font-weight:700;color:#e2e8f0;margin-bottom:4px">⚡ Groq <span style="color:#4ade80;font-size:9px">kostenlos</span></div>
-        <input id="setup-groq" type="password" placeholder="gsk_..." style="width:100%;padding:9px 12px;border-radius:8px;border:1px solid #1a2e4a;background:#0a1628;color:#e2e8f0;font-family:monospace;font-size:11px;box-sizing:border-box">
-        <a href="https://console.groq.com/keys" target="_blank" style="font-size:9px;color:#38bdf8">→ console.groq.com</a>
-      </div>
-
-      <div style="margin-bottom:12px">
-        <div style="font-size:11px;font-weight:700;color:#e2e8f0;margin-bottom:4px">📡 Finnhub <span style="color:#4ade80;font-size:9px">kostenlos</span></div>
-        <input id="setup-finnhub" type="password" placeholder="Finnhub Key..." style="width:100%;padding:9px 12px;border-radius:8px;border:1px solid #1a2e4a;background:#0a1628;color:#e2e8f0;font-family:monospace;font-size:11px;box-sizing:border-box">
-        <a href="https://finnhub.io/register" target="_blank" style="font-size:9px;color:#38bdf8">→ finnhub.io</a>
-      </div>
-
-      <div style="margin-bottom:16px">
-        <div style="font-size:11px;font-weight:700;color:#e2e8f0;margin-bottom:4px">📊 Alpha Vantage <span style="color:#4ade80;font-size:9px">kostenlos</span></div>
-        <input id="setup-alphav" type="password" placeholder="Alpha Vantage Key..." style="width:100%;padding:9px 12px;border-radius:8px;border:1px solid #1a2e4a;background:#0a1628;color:#e2e8f0;font-family:monospace;font-size:11px;box-sizing:border-box">
-        <a href="https://www.alphavantage.co/support/#api-key" target="_blank" style="font-size:9px;color:#38bdf8">→ alphavantage.co</a>
-      </div>
-
-      <button onclick="saveSetupKeys()" style="width:100%;padding:13px;border-radius:10px;border:none;background:linear-gradient(135deg,#6366f1,#38bdf8);color:#fff;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer">
-        ✓ Speichern & App starten
-      </button>
-      <button onclick="skipSetup()" style="width:100%;padding:10px;border-radius:10px;border:1px solid #1a2e4a;background:transparent;color:#64748b;font-family:inherit;font-size:11px;cursor:pointer;margin-top:8px">
-        Überspringen (Keys später unter ⚙️ KI-Keys eintragen)
-      </button>
-    </div>
-  </div>
-</div>
-
-
-<!-- ═══ TAB 10: DIVIDENDEN-KALENDER ═══ -->
-<div class="sec" id="s10">
-  <div class="card" style="margin-top:4px">
-    <div class="card-t">📅 <span>Nächste Dividenden</span>
-      <button onclick="buildDivCalendar()" style="margin-left:auto;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2);color:var(--blue);padding:4px 10px;border-radius:6px;font-size:10px;font-weight:700;cursor:pointer;font-family:inherit">🔄 Aktualisieren</button>
-    </div>
-    <div class="div-total-bar" id="div-summary">
-      <div><div style="font-size:9px;color:var(--muted)">Diesen Monat</div><div style="font-size:16px;font-weight:800;color:#4ade80" id="div-this-month">–</div></div>
-      <div><div style="font-size:9px;color:var(--muted)">Nächsten Monat</div><div style="font-size:16px;font-weight:800;color:#38bdf8" id="div-next-month">–</div></div>
-      <div><div style="font-size:9px;color:var(--muted)">Dieses Jahr</div><div style="font-size:16px;font-weight:800;color:#fbbf24" id="div-this-year">–</div></div>
-    </div>
-    <div id="div-calendar"></div>
-  </div>
-
-  <!-- ALARM SECTION -->
-  <div class="card">
-    <div class="card-t">🔔 <span>Kursalarme</span>
-      <button onclick="checkAlarms()" style="margin-left:auto;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.2);color:#fbbf24;padding:4px 10px;border-radius:6px;font-size:10px;font-weight:700;cursor:pointer;font-family:inherit">Prüfen</button>
-    </div>
-    <div style="display:flex;gap:6px;margin-bottom:10px">
-      <select id="alarm-ticker" class="rv-inp" style="margin:0;flex:1">
-        <option value="">Ticker wählen…</option>
-      </select>
-      <select id="alarm-dir" class="rv-inp" style="margin:0;width:100px">
-        <option value="above">Über</option>
-        <option value="below">Unter</option>
-      </select>
-      <input id="alarm-price" type="number" class="rv-inp" placeholder="Kurs $" style="margin:0;width:80px">
-      <button onclick="addAlarm()" class="key-save">+</button>
-    </div>
-    <div id="alarm-list"></div>
-    <div style="font-size:10px;color:var(--muted);margin-top:6px">💡 Alarme werden beim nächsten Kursabruf automatisch geprüft</div>
-  </div>
-</div>
-
-<!-- ═══ TAB 11: SPARPLAN-SIMULATOR ═══ -->
-<div class="sec" id="s11">
-  <div class="card" style="margin-top:4px">
-    <div class="card-t">🎯 <span>Sparplan-Simulator</span></div>
-
-    <div style="margin-bottom:14px">
-      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
-        <span>💶 Monatliche Einzahlung</span>
-        <span style="font-weight:800;color:var(--blue)" id="sim-monthly-val">262 €</span>
-      </div>
-      <input type="range" class="sim-slider" id="sim-monthly" min="50" max="2000" step="50" value="262" oninput="updateSimulator()">
-    </div>
-
-    <div style="margin-bottom:14px">
-      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
-        <span>📈 Ø Dividend Yield</span>
-        <span style="font-weight:800;color:var(--gold)" id="sim-yield-val">5.5%</span>
-      </div>
-      <input type="range" class="sim-slider" id="sim-yield" min="2" max="12" step="0.5" value="5.5" oninput="updateSimulator()">
-    </div>
-
-    <div style="margin-bottom:14px">
-      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
-        <span>📅 Laufzeit</span>
-        <span style="font-weight:800;color:#a78bfa" id="sim-years-val">34 Jahre (bis 2060)</span>
-      </div>
-      <input type="range" class="sim-slider" id="sim-years" min="1" max="40" step="1" value="34" oninput="updateSimulator()">
-    </div>
-
-    <div style="margin-bottom:14px">
-      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
-        <span>📊 Kurswachstum p.a.</span>
-        <span style="font-weight:800;color:#f97316" id="sim-growth-val">3%</span>
-      </div>
-      <input type="range" class="sim-slider" id="sim-growth" min="0" max="12" step="0.5" value="3" oninput="updateSimulator()">
-    </div>
-
-    <!-- DRIP + EXTRA EINZAHLUNGEN -->
-    <div style="background:rgba(251,191,36,.05);border:1px solid rgba(251,191,36,.2);border-radius:10px;padding:12px;margin-bottom:14px">
-      <div style="font-size:11px;font-weight:800;color:#fbbf24;margin-bottom:10px">⚡ Erweiterte Optionen</div>
-
-      <!-- DRIP Toggle -->
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-        <div>
-          <div style="font-size:11px;font-weight:700;color:#e2e8f0">🔄 Dividenden reinvestieren (DRIP)</div>
-          <div style="font-size:9px;color:#64748b">Dividenden sofort wieder anlegen</div>
-        </div>
-        <div onclick="toggleDRIP()" id="drip-toggle" style="width:44px;height:24px;border-radius:12px;background:#1e293b;border:2px solid #334155;cursor:pointer;position:relative;transition:all .3s">
-          <div id="drip-knob" style="width:18px;height:18px;border-radius:50%;background:#475569;position:absolute;top:1px;left:1px;transition:all .3s"></div>
-        </div>
-      </div>
-
-      <!-- Extra Einzahlung 1 -->
-      <div style="margin-bottom:10px">
-        <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
-          <span>🎁 Extra-Einzahlung 1 (z.B. Juni)</span>
-          <span style="font-weight:800;color:#fbbf24" id="sim-extra1-val">0 €</span>
-        </div>
-        <input type="range" class="sim-slider" id="sim-extra1" min="0" max="2000" step="50" value="0" oninput="updateSimulator()">
-      </div>
-
-      <!-- Extra Einzahlung 2 -->
-      <div>
-        <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
-          <span>🎁 Extra-Einzahlung 2 (z.B. Dez.)</span>
-          <span style="font-weight:800;color:#fbbf24" id="sim-extra2-val">0 €</span>
-        </div>
-        <input type="range" class="sim-slider" id="sim-extra2" min="0" max="2000" step="50" value="0" oninput="updateSimulator()">
-      </div>
-    </div>
-
-    <!-- VERGLEICH KARTE -->
-    <div id="sim-comparison" style="display:none;background:rgba(99,102,241,.06);border:1px solid rgba(99,102,241,.2);border-radius:10px;padding:12px;margin-bottom:14px">
-      <div style="font-size:10px;font-weight:800;color:#818cf8;margin-bottom:8px;text-transform:uppercase">📊 Vergleich</div>
-      <div id="sim-comparison-rows"></div>
-    </div>
-
-    <!-- RESULT -->
-    <div style="text-align:center;background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.15);border-radius:12px;padding:16px;margin:12px 0">
-      <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px">Monatlicher CF netto am Ende</div>
-      <div class="sim-result-big" id="sim-cf-result">–</div>
-      <div style="font-size:11px;color:var(--muted)" id="sim-cf-sub">–</div>
-    </div>
-
-    <div class="sim-grid" id="sim-stats"></div>
-
-    <!-- YEAR CHART -->
-    <div style="margin-top:12px">
-      <div style="font-size:10px;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">Depot-Entwicklung</div>
-      <div id="sim-chart"></div>
-    </div>
-
-    <!-- MILESTONE BADGES -->
-    <div style="margin-top:12px">
-      <div style="font-size:10px;color:var(--muted);margin-bottom:8px">🏁 Meilensteine</div>
-      <div id="sim-milestones" style="display:flex;flex-wrap:wrap;gap:6px"></div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ TAB 12: vs S&P500 ═══ -->
-<div class="sec" id="s12">
-  <div class="card" style="margin-top:4px">
-    <div class="card-t">📉 <span>Mein Portfolio vs S&P 500</span>
-      <button onclick="loadComparison()" style="margin-left:auto;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2);color:var(--blue);padding:4px 10px;border-radius:6px;font-size:10px;font-weight:700;cursor:pointer;font-family:inherit">🔄 Laden</button>
-    </div>
-
-    <div class="cmp-legend">
-      <span><span class="cmp-dot" style="background:#38bdf8"></span>Mein Portfolio</span>
-      <span><span class="cmp-dot" style="background:#f59e0b"></span>S&P 500 (SPY)</span>
-      <span><span class="cmp-dot" style="background:#4ade80"></span>Div. reinvestiert</span>
-    </div>
-
-    <div class="period-btns" style="margin-bottom:10px">
-      <button class="pbtn on" onclick="setCmpPeriod('1mo',this)">1M</button>
-      <button class="pbtn" onclick="setCmpPeriod('3mo',this)">3M</button>
-      <button class="pbtn" onclick="setCmpPeriod('1y',this)">1J</button>
-      <button class="pbtn" onclick="setCmpPeriod('5y',this)">5J</button>
-    </div>
-
-    <div class="chart-wrap">
-      <div class="chart-loading" id="cmp-loading">📊 Vergleich laden…</div>
-      <canvas id="cmp-canvas" style="display:none;height:180px"></canvas>
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:10px" id="cmp-stats"></div>
-  </div>
-
-  
-
-
-
-    <div class="card">
-    <div class="card-t">📊 <span>Performance-Analyse</span></div>
-    <div id="cmp-analysis" style="font-size:11px;line-height:2;color:var(--muted)">
-      Klick auf "Laden" um den Vergleich zu starten.
-    </div>
-  </div>
-</div>
-
 <!-- STICKY BAR -->
 <div class="sbar">
   <div class="ss"><div class="ss-v" id="sb-depot" style="color:var(--green)">–</div><div class="ss-l">Depot</div></div>
@@ -1332,6 +915,102 @@ select.inp option{background:#0a1628}
     <label class="label">Notiz (optional)</label>
     <input class="inp" type="text" id="m-notiz" placeholder="z.B. 15. Monats-Kauf">
     <button class="btn-primary" onclick="saveBuchung()">✓ Buchung speichern</button>
+  </div>
+</div>
+
+<!-- ═══ TAB 10: Dividenden ═══ -->
+<div class="sec" id="s10">
+  <div class="card" style="margin-top:4px">
+    <div class="card-t">📅 <span>Dividenden-Kalender</span></div>
+    <div id="div-cal-content"><div style="text-align:center;padding:20px;color:#475569">📅 Lade Dividenden...</div></div>
+  </div>
+</div>
+
+<!-- ═══ TAB 11: Simulator ═══ -->
+<div class="sec" id="s11">
+  <div class="card" style="margin-top:4px">
+    <div class="card-t">🎯 <span>Sparplan-Simulator</span></div>
+    <div style="margin-bottom:14px">
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
+        <span>💶 Monatliche Einzahlung</span>
+        <span style="font-weight:800;color:var(--blue)" id="sim-monthly-val">262 €</span>
+      </div>
+      <input type="range" class="sim-slider" id="sim-monthly" min="50" max="2000" step="50" value="262" oninput="updateSimulator()">
+    </div>
+    <div style="margin-bottom:14px">
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
+        <span>📈 Ø Dividend Yield</span>
+        <span style="font-weight:800;color:var(--gold)" id="sim-yield-val">5.5%</span>
+      </div>
+      <input type="range" class="sim-slider" id="sim-yield" min="2" max="12" step="0.5" value="5.5" oninput="updateSimulator()">
+    </div>
+    <div style="margin-bottom:14px">
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
+        <span>📅 Laufzeit</span>
+        <span style="font-weight:800;color:#a78bfa" id="sim-years-val">34 Jahre (bis 2060)</span>
+      </div>
+      <input type="range" class="sim-slider" id="sim-years" min="1" max="40" step="1" value="34" oninput="updateSimulator()">
+    </div>
+    <div style="margin-bottom:14px">
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
+        <span>📊 Kurswachstum p.a.</span>
+        <span style="font-weight:800;color:#f97316" id="sim-growth-val">3%</span>
+      </div>
+      <input type="range" class="sim-slider" id="sim-growth" min="0" max="12" step="0.5" value="3" oninput="updateSimulator()">
+    </div>
+    <!-- DRIP + EXTRA EINZAHLUNGEN -->
+    <div style="background:rgba(251,191,36,.05);border:1px solid rgba(251,191,36,.2);border-radius:10px;padding:12px;margin-bottom:14px">
+      <div style="font-size:11px;font-weight:800;color:#fbbf24;margin-bottom:10px">⚡ Erweiterte Optionen</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+        <div>
+          <div style="font-size:11px;font-weight:700;color:#e2e8f0">🔄 Dividenden reinvestieren (DRIP)</div>
+          <div style="font-size:9px;color:#64748b">Dividenden sofort wieder anlegen</div>
+        </div>
+        <div onclick="toggleDRIP()" id="drip-toggle" style="width:44px;height:24px;border-radius:12px;background:#1e293b;border:2px solid #334155;cursor:pointer;position:relative;transition:all .3s">
+          <div id="drip-knob" style="width:18px;height:18px;border-radius:50%;background:#475569;position:absolute;top:1px;left:1px;transition:all .3s"></div>
+        </div>
+      </div>
+      <div style="margin-bottom:10px">
+        <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
+          <span>🎁 Extra-Einzahlung 1 (z.B. Juni)</span>
+          <span style="font-weight:800;color:#fbbf24" id="sim-extra1-val">0 €</span>
+        </div>
+        <input type="range" class="sim-slider" id="sim-extra1" min="0" max="2000" step="50" value="0" oninput="updateSimulator()">
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
+          <span>🎁 Extra-Einzahlung 2 (z.B. Dez.)</span>
+          <span style="font-weight:800;color:#fbbf24" id="sim-extra2-val">0 €</span>
+        </div>
+        <input type="range" class="sim-slider" id="sim-extra2" min="0" max="2000" step="50" value="0" oninput="updateSimulator()">
+      </div>
+    </div>
+    <div id="sim-comparison" style="display:none;background:rgba(99,102,241,.06);border:1px solid rgba(99,102,241,.2);border-radius:10px;padding:12px;margin-bottom:14px">
+      <div style="font-size:10px;font-weight:800;color:#818cf8;margin-bottom:8px;text-transform:uppercase">📊 Vergleich</div>
+      <div id="sim-comparison-rows"></div>
+    </div>
+    <div style="text-align:center;background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.15);border-radius:12px;padding:16px;margin:12px 0">
+      <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px">Monatlicher CF netto am Ende</div>
+      <div class="sim-result-big" id="sim-cf-result">–</div>
+      <div style="font-size:11px;color:var(--muted)" id="sim-cf-sub">–</div>
+    </div>
+    <div class="sim-grid" id="sim-stats"></div>
+    <div style="margin-top:12px">
+      <div style="font-size:10px;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">Depot-Entwicklung</div>
+      <div id="sim-chart"></div>
+    </div>
+    <div style="margin-top:12px">
+      <div style="font-size:10px;color:var(--muted);margin-bottom:8px">🏁 Meilensteine</div>
+      <div id="sim-milestones" style="display:flex;flex-wrap:wrap;gap:6px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TAB 12: vs S&P500 ═══ -->
+<div class="sec" id="s12">
+  <div class="card" style="margin-top:4px">
+    <div class="card-t">📉 <span>Realty Income O vs S&amp;P500</span></div>
+    <div id="sp500-content"><div style="text-align:center;padding:20px;color:#475569">📊 Lade Chart...</div></div>
   </div>
 </div>
 
@@ -1475,6 +1154,37 @@ select.inp option{background:#0a1628}
 
 
 <script>
+
+const MASTER_HOLDINGS = {
+  'HAFN': 50.84,
+  'LTC':  1.61,
+  'EPR':  1.07,
+  'AVGO': 0.16,
+  'VZ':   1.0,
+  'ADC':  0.57,
+  'STAG': 1.0,
+  'O':    3.317,
+  'PEP':  0.02,
+  'PG':   0.03,
+  'JNJ':  0.01,
+  'KO':   0.05,
+  'RPID': 0.25
+};
+const MASTER_TRADES = [];
+const MASTER_VERSION = '2026-03-02-v1';
+
+// Auto-sync: load MASTER into localStorage if not already done
+(function autoSync() {
+  const lsVersion = localStorage.getItem('mucki-master-version');
+  if(lsVersion !== MASTER_VERSION) {
+    localStorage.setItem('mucki-holdings', JSON.stringify(MASTER_HOLDINGS));
+    localStorage.setItem('mucki-trades',   JSON.stringify(MASTER_TRADES));
+    localStorage.setItem('mucki-master-version', MASTER_VERSION);
+    console.log('✅ Auto-sync: MASTER_HOLDINGS → localStorage');
+  }
+})();
+
+
 // ════════════════════════════════════════════════════════════════════════
 // SIMULATION DATA (baked in)
 // ════════════════════════════════════════════════════════════════════════
@@ -5400,148 +5110,8 @@ window.T = function(el, i) {
   if(i === 6) { updatePiggyDisplay(); updateRestgeldPreview(); }
 };
 
+
 </script>
-
-<!-- ═══ FLOATING CHATBOT ═══ -->
-<button class="chat-fab" id="chat-fab" onclick="toggleChat()" title="KI-Assistent">💬</button>
-<div class="chat-window" id="chat-window" style="display:none">
-  <div class="chat-header">
-    <span>🤖</span>
-    <span>Mucki KI-Assistent</span>
-    <button onclick="toggleChat()" style="margin-left:auto;background:transparent;border:none;color:var(--muted);cursor:pointer;font-size:16px">×</button>
-  </div>
-  <div class="chat-messages" id="chat-messages">
-    <div class="chat-msg ai">👋 Hallo! Ich bin dein persönlicher Portfolio-Assistent. Frag mich alles über dein Depot, Aktien oder deine 2060-Strategie!</div>
-  </div>
-  <div class="chat-input-row">
-    <input class="chat-inp" id="chat-inp" placeholder="Frage stellen…" onkeydown="if(event.key==='Enter')sendChat()">
-    <button class="chat-send" onclick="sendChat()">→</button>
-  </div>
-</div>
-
-
-<!-- SETTINGS GEAR BUTTON -->
-<button class="gear-btn" onclick="openSettings()" title="Einstellungen">⚙️</button>
-
-<!-- SETTINGS MODAL -->
-<div class="settings-overlay" id="settings-overlay" style="display:none" onclick="if(event.target===this)closeSettings()">
-  <div class="settings-sheet">
-    <div class="settings-title">⚙️ Einstellungen
-      <button onclick="closeSettings()" style="margin-left:auto;background:transparent;border:none;color:var(--muted);font-size:20px;cursor:pointer">×</button>
-    </div>
-
-    <div class="setting-row">
-      <div class="setting-label">💶 Monatliche Sparrate</div>
-      <div class="setting-sub">Wie viel investierst du jeden Monat?</div>
-      <input class="setting-inp" type="number" id="set-monthly" placeholder="262" min="0" max="10000">
-      <span style="font-size:10px;color:var(--muted)">€/Monat</span>
-    </div>
-
-    <div class="setting-row">
-      <div class="setting-label">🎯 Ziel Cash Flow</div>
-      <div class="setting-sub">Passives Einkommen Ziel pro Monat</div>
-      <input class="setting-inp" type="number" id="set-target-cf" placeholder="1000" min="0">
-      <span style="font-size:10px;color:var(--muted)">$/Monat netto</span>
-    </div>
-
-    <div class="setting-row">
-      <div class="setting-label">📅 Ziel-Jahr</div>
-      <div class="setting-sub">Bis wann willst du das CF-Ziel erreichen?</div>
-      <input class="setting-inp" type="number" id="set-target-year" placeholder="2060" min="2026" max="2100">
-    </div>
-
-    <div class="setting-row">
-      <div class="setting-label">📊 Steuer-Satz</div>
-      <div class="setting-sub">Abgeltungssteuer inkl. Soli (DE: 26.375%)</div>
-      <input class="setting-inp" type="number" id="set-tax" placeholder="26.375" min="0" max="50" step="0.001">
-      <span style="font-size:10px;color:var(--muted)">% (wird für Netto-Berechnung verwendet)</span>
-    </div>
-
-    <div class="setting-row">
-      <div class="setting-label">📈 Investitions-Strategie</div>
-      <div class="setting-sub">Wie soll das monatliche Budget verteilt werden?</div>
-      <div class="strategy-btns">
-        <button class="strat-btn" id="strat-monthly" onclick="setStrategy('monthly')">
-          👑 Nur Monatszahler<br><span style="font-size:9px;font-weight:400">O, EPR, ADC, LTC</span>
-        </button>
-        <button class="strat-btn" id="strat-balanced" onclick="setStrategy('balanced')">
-          ⚖️ Ausgewogen<br><span style="font-size:9px;font-weight:400">Alle untergewichteten</span>
-        </button>
-        <button class="strat-btn" id="strat-cf" onclick="setStrategy('cf')">
-          💰 CF-maximiert<br><span style="font-size:9px;font-weight:400">Höchster Yield zuerst</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="setting-row">
-      <div class="setting-label">👤 Sparer-Name</div>
-      <input class="setting-inp" type="text" id="set-name" placeholder="Cayde">
-    </div>
-
-    <button class="settings-save" onclick="saveSettings()">✓ Einstellungen speichern</button>
-  </div>
-</div>
-
-
-<!-- ═══ SETTINGS FAB ═══ -->
-<button class="settings-fab" onclick="openSettings()" title="Einstellungen">⚙️</button>
-
-<!-- ═══ SETTINGS MODAL ═══ -->
-<div class="settings-overlay" id="settings-overlay" style="display:none" onclick="if(event.target===this)closeSettings()">
-  <div class="settings-sheet">
-    <div class="settings-title">⚙️ Einstellungen
-      <button onclick="closeSettings()" style="margin-left:auto;background:transparent;border:none;color:var(--muted);font-size:22px;cursor:pointer;padding:0">×</button>
-    </div>
-
-    <div class="settings-row">
-      <div><div class="settings-label">💶 Monatliche Sparrate</div><div class="settings-sub">Aktuell aktive Einzahlung</div></div>
-      <input class="settings-inp" type="number" id="set-monthly" value="262" min="0" max="10000">
-    </div>
-
-    <div class="settings-row">
-      <div><div class="settings-label">🎯 Ziel CF/Monat</div><div class="settings-sub">Ziel monatlicher Cash Flow netto</div></div>
-      <div style="display:flex;align-items:center;gap:4px">
-        <input class="settings-inp" type="number" id="set-target-cf" value="1000" min="100" max="50000">
-        <span style="font-size:11px;color:var(--muted)">$/M</span>
-      </div>
-    </div>
-
-    <div class="settings-row">
-      <div><div class="settings-label">📅 Ziel-Jahr</div><div class="settings-sub">Wann soll das CF-Ziel erreicht sein</div></div>
-      <input class="settings-inp" type="number" id="set-target-year" value="2060" min="2025" max="2100">
-    </div>
-
-    <div class="settings-row">
-      <div><div class="settings-label">💸 Steuer-Satz</div><div class="settings-sub">Kapitalertragsteuer inkl. Soli</div></div>
-      <div style="display:flex;align-items:center;gap:4px">
-        <input class="settings-inp" type="number" id="set-tax" value="26.375" min="0" max="50" step="0.001">
-        <span style="font-size:11px;color:var(--muted)">%</span>
-      </div>
-    </div>
-
-    <div class="settings-row">
-      <div><div class="settings-label">📊 Kaufplan-Strategie</div><div class="settings-sub">Wie wird das Budget verteilt?</div></div>
-      <div class="settings-toggle">
-        <button class="s-tog-btn on" id="strat-monthly" onclick="setStrategy('monthly',this)">👑 Monatszahler</button>
-        <button class="s-tog-btn" id="strat-all" onclick="setStrategy('all',this)">🌍 Alle</button>
-      </div>
-    </div>
-
-    <div class="settings-row">
-      <div><div class="settings-label">🌍 EUR/USD Kurs</div><div class="settings-sub">Wird automatisch aktualisiert</div></div>
-      <div style="display:flex;align-items:center;gap:4px">
-        <input class="settings-inp" type="number" id="set-eurusd" value="1.18" min="0.5" max="2" step="0.001">
-        <span style="font-size:11px;color:var(--muted)">€/$</span>
-      </div>
-    </div>
-
-    <button onclick="saveSettings()" style="width:100%;margin-top:16px;padding:14px;border-radius:12px;border:none;background:linear-gradient(135deg,#6366f1,#38bdf8);color:#fff;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer">
-      ✓ Einstellungen speichern
-    </button>
-
-    <div style="font-size:10px;color:var(--muted);text-align:center;margin-top:10px">Änderungen gelten sofort für alle Berechnungen</div>
-  </div>
-</div>
 
 </body>
 </html>
