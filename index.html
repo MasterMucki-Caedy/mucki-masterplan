@@ -1292,9 +1292,13 @@ async function fetchLivePrices() {
       const parsed = JSON.parse(data.contents);
       const price = parsed?.chart?.result?.[0]?.meta?.regularMarketPrice;
       if (price && price > 0) {
-        // Convert to EUR for European stocks
-        const isEuro = ['HAFN','HSBA'].includes(ticker);
-        results[ticker] = isEuro ? +(price * 0.92).toFixed(2) : +price.toFixed(2);
+        // Convert European stocks to USD
+        // HAFN.OL = NOK price (e.g. 88 NOK × 0.09 = 7.92 USD)
+        // HSBA.L  = GBp price (pence, e.g. 852p × 0.012 = 10.22 USD)
+        let priceUSD = price;
+        if(ticker === 'HAFN') priceUSD = +(price * 0.09).toFixed(2);
+        else if(ticker === 'HSBA') priceUSD = +(price * 0.012).toFixed(2);
+        results[ticker] = +priceUSD.toFixed(2);
         ok++;
       } else fail++;
     } catch(e) { fail++; }
